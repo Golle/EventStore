@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28606.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamingHiddenDonut.EventStore", "StreamingHiddenDonut.EventStore\StreamingHiddenDonut.EventStore.csproj", "{6F5A4E76-7483-402A-A067-DADA2BD8A8C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F5A4E76-7483-402A-A067-DADA2BD8A8C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F5A4E76-7483-402A-A067-DADA2BD8A8C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F5A4E76-7483-402A-A067-DADA2BD8A8C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F5A4E76-7483-402A-A067-DADA2BD8A8C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F056F848-20F8-495E-A04A-EDAA92B5410B}
+	EndGlobalSection
+EndGlobal
