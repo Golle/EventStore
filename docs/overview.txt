@@ -1,0 +1,15 @@
+
+/// Event Stream
+Basic implementation (In Memory)
+* Structure (First version)
+    * [StreamId, CommitId, SequenceNumber, Created, Data(Serialized Events)]
+
+
+/// Snapshots
+* Structure (MVP)
+    * [StreamId, EventId, Version(Aggregate version), Data(Serialized Aggregate)]
+
+/// Projections
+* Structure (MVP)
+    * Full Rebuild on every Event
+    * Incremental streaming of events
