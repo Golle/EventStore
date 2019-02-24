@@ -1,12 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\StreamingHiddenDonut.Core\StreamingHiddenDonut.Core.csproj" />
+    <ProjectReference Include="..\StreamingHiddenDonut.DataSources.MSSQL\StreamingHiddenDonut.DataSources.MSSQL.csproj" />
     <ProjectReference Include="..\StreamingHiddenDonut.EventStore\StreamingHiddenDonut.EventStore.csproj" />
   </ItemGroup>
 

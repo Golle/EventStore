@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28606.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamingHiddenDonut.EventStore", "StreamingHiddenDonut.EventStore\StreamingHiddenDonut.EventStore.csproj", "{6F5A4E76-7483-402A-A067-DADA2BD8A8C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StreamingHiddenDonut.EventStore", "StreamingHiddenDonut.EventStore\StreamingHiddenDonut.EventStore.csproj", "{6F5A4E76-7483-402A-A067-DADA2BD8A8C6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{4831CA7E-0F64-4306-8687-C38D70ABAA90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventStreamSample1", "EventStreamSample1\EventStreamSample1.csproj", "{D8CB94B7-FB34-4D1A-B710-AF3570C11FC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventStreamSample1", "EventStreamSample1\EventStreamSample1.csproj", "{D8CB94B7-FB34-4D1A-B710-AF3570C11FC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamingHiddenDonut.DataSources.MSSQL", "StreamingHiddenDonut.DataSources.MSSQL\StreamingHiddenDonut.DataSources.MSSQL.csproj", "{1FA4A6C5-DAFD-49B1-959C-A41348E54B1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamingHiddenDonut.Core", "StreamingHiddenDonut.Core\StreamingHiddenDonut.Core.csproj", "{FC4BB629-FA1F-46D7-9D04-A34A05C881A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +27,14 @@ Global
 		{D8CB94B7-FB34-4D1A-B710-AF3570C11FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8CB94B7-FB34-4D1A-B710-AF3570C11FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8CB94B7-FB34-4D1A-B710-AF3570C11FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FA4A6C5-DAFD-49B1-959C-A41348E54B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FA4A6C5-DAFD-49B1-959C-A41348E54B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FA4A6C5-DAFD-49B1-959C-A41348E54B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FA4A6C5-DAFD-49B1-959C-A41348E54B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC4BB629-FA1F-46D7-9D04-A34A05C881A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC4BB629-FA1F-46D7-9D04-A34A05C881A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC4BB629-FA1F-46D7-9D04-A34A05C881A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC4BB629-FA1F-46D7-9D04-A34A05C881A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

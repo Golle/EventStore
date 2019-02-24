@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+
+using StreamingHiddenDonut.DataSources.MSSQL;
 using StreamingHiddenDonut.EventStore;
+using StreamingHiddenDonut.EventStore.Iniitializer;
 using StreamingHiddenDonut.EventStore.Stream.Data;
 
 namespace EventStreamSample1
@@ -9,6 +12,15 @@ namespace EventStreamSample1
     class Program
     {
         static async Task Main(string[] args)
+        {
+            await EventStoreInitializer.CreateEventStore("My event store")
+                .WithMsSql(new MsSqlDataSourceOptions("c"))
+                .Initialize();
+
+            Console.ReadKey();
+        }
+
+        private static async Task Sample1()
         {
             var streamId = Guid.NewGuid();
             var bs = new Bootstrapper();
@@ -31,6 +43,7 @@ namespace EventStreamSample1
             {
                 Handle((dynamic) @event);
             }
+
             Console.ReadKey();
         }
 
