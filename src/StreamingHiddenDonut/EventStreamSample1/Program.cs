@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
-
 using StreamingHiddenDonut.DataSources.MSSQL;
 using StreamingHiddenDonut.EventStore;
 using StreamingHiddenDonut.EventStore.Iniitializer;
@@ -9,12 +7,12 @@ using StreamingHiddenDonut.EventStore.Stream.Data;
 
 namespace EventStreamSample1
 {
-    class Program
+    internal class Program
     {
         static async Task Main(string[] args)
         {
             await EventStoreInitializer.CreateEventStore("My event store")
-                .WithMsSql(new MsSqlDataSourceOptions("c"))
+                .WithMsSql(new MsSqlDataSourceOptions(@"Server=(LocalDb)\MSSQLLocalDB;Database=eventstore_1;Integrated Security=true;", table: "eventstore1", createOnInit: true))
                 .Initialize();
 
             Console.ReadKey();
@@ -29,12 +27,12 @@ namespace EventStreamSample1
             var reader = bs.Reader;
 
 
-            await writer.PushToStream(streamId, new CreatedUserEvent {Name = "a", UserId = "user-id: a"});
-            await writer.PushToStream(streamId, new CreatedUserEvent {Name = "b", UserId = "user-id: b"});
-            await writer.PushToStream(streamId, new CreatedUserEvent {Name = "c", UserId = "user-id: c"});
-            await writer.PushToStream(streamId, new CreatedUserEvent {Name = "d", UserId = "user-id: d"});
-            await writer.PushToStream(streamId, new CreatedUserEvent {Name = "e", UserId = "user-id: e"});
-            await writer.PushToStream(streamId, new CreatedUserEvent {Name = "f", UserId = "user-id: f"});
+            await writer.PushToStream(streamId, new UserCreatedEvent {Name = "a", UserId = "user-id: a"});
+            await writer.PushToStream(streamId, new UserCreatedEvent {Name = "b", UserId = "user-id: b"});
+            await writer.PushToStream(streamId, new UserCreatedEvent {Name = "c", UserId = "user-id: c"});
+            await writer.PushToStream(streamId, new UserCreatedEvent {Name = "d", UserId = "user-id: d"});
+            await writer.PushToStream(streamId, new UserCreatedEvent {Name = "e", UserId = "user-id: e"});
+            await writer.PushToStream(streamId, new UserCreatedEvent {Name = "f", UserId = "user-id: f"});
 
 
             var result = await reader.GetStream(streamId);
@@ -47,14 +45,14 @@ namespace EventStreamSample1
             Console.ReadKey();
         }
 
-        private static void Handle(CreatedUserEvent @event)
+        private static void Handle(UserCreatedEvent @event)
         {
             Console.WriteLine($"User '{@event.Name}' with UserId '{@event.UserId}'");
         }
     }
 
 
-    public class CreatedUserEvent : Event
+    public class UserCreatedEvent : Event
     {
         public string UserId { get; set; }
         public string Name { get; set; }

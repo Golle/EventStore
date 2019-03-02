@@ -1,41 +1,44 @@
 ﻿using System;
 using System.Threading.Tasks;
-using StreamingHiddenDonut.Core;
 using StreamingHiddenDonut.Core.DataSources;
+using StreamingHiddenDonut.DataSources.MSSQL.Database.Connection;
+using StreamingHiddenDonut.DataSources.MSSQL.Initializer;
 
 namespace StreamingHiddenDonut.DataSources.MSSQL
 {
-    public class MsSqlDataSourceInitializer : IDataSourceInitializer
+    internal class MsSqlDataSourceInitializer : IDataSourceInitializer
     {
-        public MsSqlDataSourceInitializer(MsSqlDataSourceOptions options)
-        {
-        }
-        public Task Initialize()
-        {
-            Console.WriteLine("Created the awesome Database");
-            return Task.CompletedTask;
-        }
-    }
+        private readonly MsSqlDataSourceOptions _options;
+        private readonly ISqlConnectionFactory _sqlConnectionFactory;
 
-    public class MsSqlDataSourceOptions : IDataSourceOptions
-    {
-        private readonly string _connectionString;
-        private readonly string _table;
-        private readonly bool _createOnInit;
-
-        public MsSqlDataSourceOptions(string connectionString, string table = "eventstore", bool createOnInit = false)
+        public MsSqlDataSourceInitializer(MsSqlDataSourceOptions options, ISqlConnectionFactory sqlConnectionFactory)
         {
-            _connectionString = connectionString;
-            _table = table;
-            _createOnInit = createOnInit;
+            _options = options;
+            _sqlConnectionFactory = sqlConnectionFactory;
         }
-    }
 
-    public static class EventStoreBuilderExtensions
-    {
-        public static IEventStoreBuilder WithMsSql(this IEventStoreBuilder builder, MsSqlDataSourceOptions options)
+        public async Task Initialize()
         {
-            return builder.WithDataSource(new MsSqlDataSourceInitializer(options));
+            if (!_options.CreateOnInit)
+            {
+                return;
+            }
+
+            using (var connection = _sqlConnectionFactory.CreateConnection(_options.ConnectionString))
+            {
+                try
+                {
+                    await connection.Open();
+                    await new EventStoreSqlDatabaseInitializer(connection)
+                        .CreateTableIfNotExists(_options.Table);
+                    await connection.Close();
+                }
+                catch (Exception e)
+                {
+                    await Console.Error.WriteLineAsync($"{GetType().Name} failed with exception: {e.Message}");
+                    throw;
+                }
+            }
         }
     }
 }

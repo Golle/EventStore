@@ -4,7 +4,7 @@ using StreamingHiddenDonut.Core.DataSources;
 
 namespace StreamingHiddenDonut.Core
 {
-    internal class EventStoreBuilder : IEventStoreBuilder
+    public class EventStoreBuilder : IEventStoreBuilder
     {
         private readonly string _name;
         private IDataSourceInitializer _dataSource;
