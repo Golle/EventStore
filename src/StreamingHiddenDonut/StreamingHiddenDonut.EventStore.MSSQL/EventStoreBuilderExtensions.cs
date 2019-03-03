@@ -1,7 +1,6 @@
-﻿using StreamingHiddenDonut.Core;
-using StreamingHiddenDonut.DataSources.MSSQL.Database.Connection;
+﻿using StreamingHiddenDonut.EventStore.MSSQL.Database.Connection;
 
-namespace StreamingHiddenDonut.DataSources.MSSQL
+namespace StreamingHiddenDonut.EventStore.MSSQL
 {
     public static class EventStoreBuilderExtensions
     {

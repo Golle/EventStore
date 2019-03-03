@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using StreamingHiddenDonut.DataSources.MSSQL.Database.Connection.Reader;
+using StreamingHiddenDonut.EventStore.MSSQL.Database.Connection.Reader;
 
-namespace StreamingHiddenDonut.DataSources.MSSQL.Database.Connection
+namespace StreamingHiddenDonut.EventStore.MSSQL.Database.Connection
 {
     internal interface ISqlConnection : IDisposable
     {

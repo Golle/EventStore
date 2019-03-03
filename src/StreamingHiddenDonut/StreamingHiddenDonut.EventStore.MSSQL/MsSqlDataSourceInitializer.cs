@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
-using StreamingHiddenDonut.Core.DataSources;
-using StreamingHiddenDonut.DataSources.MSSQL.Database.Connection;
-using StreamingHiddenDonut.DataSources.MSSQL.Initializer;
+using StreamingHiddenDonut.EventStore.DataSource;
+using StreamingHiddenDonut.EventStore.MSSQL.Database.Connection;
+using StreamingHiddenDonut.EventStore.MSSQL.Initializer;
 
-namespace StreamingHiddenDonut.DataSources.MSSQL
+namespace StreamingHiddenDonut.EventStore.MSSQL
 {
     internal class MsSqlDataSourceInitializer : IDataSourceInitializer
     {

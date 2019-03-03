@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\StreamingHiddenDonut.Core\StreamingHiddenDonut.Core.csproj" />
+    <ProjectReference Include="..\StreamingHiddenDonut.EventStore\StreamingHiddenDonut.EventStore.csproj" />
   </ItemGroup>
 
 </Project>

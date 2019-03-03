@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 
-namespace StreamingHiddenDonut.DataSources.MSSQL.Database.Connection
+namespace StreamingHiddenDonut.EventStore.MSSQL.Database.Connection
 {
     internal class SqlConnectionFactory : ISqlConnectionFactory
     {

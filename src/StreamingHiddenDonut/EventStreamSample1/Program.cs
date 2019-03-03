@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using StreamingHiddenDonut.DataSources.MSSQL;
 using StreamingHiddenDonut.EventStore;
 using StreamingHiddenDonut.EventStore.Iniitializer;
+using StreamingHiddenDonut.EventStore.MSSQL;
 using StreamingHiddenDonut.EventStore.Stream.Data;
 
 namespace EventStreamSample1

@@ -7,9 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\StreamingHiddenDonut.Core\StreamingHiddenDonut.Core.csproj" />
-    <ProjectReference Include="..\StreamingHiddenDonut.DataSources.MSSQL\StreamingHiddenDonut.DataSources.MSSQL.csproj" />
-    <ProjectReference Include="..\StreamingHiddenDonut.EventStore\StreamingHiddenDonut.EventStore.csproj" />
+    <ProjectReference Include="..\StreamingHiddenDonut.EventStore.MSSQL\StreamingHiddenDonut.EventStore.MSSQL.csproj" />
   </ItemGroup>
 
 </Project>

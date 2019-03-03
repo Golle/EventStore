@@ -1,6 +1,4 @@
-﻿using StreamingHiddenDonut.Core;
-
-namespace StreamingHiddenDonut.EventStore.Iniitializer
+﻿namespace StreamingHiddenDonut.EventStore.Iniitializer
 {
     public static class EventStoreInitializer
     {

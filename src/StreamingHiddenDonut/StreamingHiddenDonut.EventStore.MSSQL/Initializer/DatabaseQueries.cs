@@ -1,4 +1,4 @@
-﻿namespace StreamingHiddenDonut.DataSources.MSSQL.Initializer
+﻿namespace StreamingHiddenDonut.EventStore.MSSQL.Initializer
 {
     internal static class DatabaseQueries
     {

@@ -1,8 +1,6 @@
-﻿using StreamingHiddenDonut.Core.DataSources;
-
-namespace StreamingHiddenDonut.DataSources.MSSQL
+﻿namespace StreamingHiddenDonut.EventStore.MSSQL
 {
-    public class MsSqlDataSourceOptions : IDataSourceOptions
+    public class MsSqlDataSourceOptions
     {
         public string ConnectionString { get; }
         public string Table { get; }

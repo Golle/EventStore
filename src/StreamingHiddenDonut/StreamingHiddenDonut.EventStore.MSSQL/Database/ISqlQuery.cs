@@ -1,4 +1,4 @@
-﻿namespace StreamingHiddenDonut.DataSources.MSSQL.Database
+﻿namespace StreamingHiddenDonut.EventStore.MSSQL.Database
 {
     internal interface ISqlQuery
     {

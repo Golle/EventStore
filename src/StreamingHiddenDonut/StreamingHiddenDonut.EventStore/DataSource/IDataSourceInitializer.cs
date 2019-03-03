@@ -1,13 +1,9 @@
 ﻿using System.Threading.Tasks;
 
-namespace StreamingHiddenDonut.Core.DataSources
+namespace StreamingHiddenDonut.EventStore.DataSource
 {
     public interface IDataSourceInitializer
     {
         Task Initialize();
-    }
-
-    public interface IDataSourceOptions
-    {
     }
 }

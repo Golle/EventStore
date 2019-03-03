@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace StreamingHiddenDonut.DataSources.MSSQL.Database.Connection.Reader
+namespace StreamingHiddenDonut.EventStore.MSSQL.Database.Connection.Reader
 {
     internal interface ISqlDataReader
     {

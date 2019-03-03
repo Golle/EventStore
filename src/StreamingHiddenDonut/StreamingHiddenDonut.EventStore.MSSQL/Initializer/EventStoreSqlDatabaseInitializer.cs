@@ -1,9 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
-using StreamingHiddenDonut.DataSources.MSSQL.Database;
-using StreamingHiddenDonut.DataSources.MSSQL.Database.Connection;
+﻿using System.Threading.Tasks;
+using StreamingHiddenDonut.EventStore.MSSQL.Database;
+using StreamingHiddenDonut.EventStore.MSSQL.Database.Connection;
 
-namespace StreamingHiddenDonut.DataSources.MSSQL.Initializer
+namespace StreamingHiddenDonut.EventStore.MSSQL.Initializer
 {
     internal class EventStoreSqlDatabaseInitializer
     {

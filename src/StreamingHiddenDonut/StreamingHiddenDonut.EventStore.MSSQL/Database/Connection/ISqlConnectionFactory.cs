@@ -1,4 +1,4 @@
-﻿namespace StreamingHiddenDonut.DataSources.MSSQL.Database.Connection
+﻿namespace StreamingHiddenDonut.EventStore.MSSQL.Database.Connection
 {
     internal interface ISqlConnectionFactory
     {

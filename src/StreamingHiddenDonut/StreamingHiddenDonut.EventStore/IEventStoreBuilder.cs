@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using StreamingHiddenDonut.Core.DataSources;
+using StreamingHiddenDonut.EventStore.DataSource;
 
-namespace StreamingHiddenDonut.Core
+namespace StreamingHiddenDonut.EventStore
 {
     public interface IEventStoreBuilder
     {
