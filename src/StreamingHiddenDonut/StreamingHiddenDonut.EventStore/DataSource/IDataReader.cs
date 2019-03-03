@@ -5,7 +5,7 @@ using StreamingHiddenDonut.EventStore.Stream.Data;
 
 namespace StreamingHiddenDonut.EventStore.DataSource
 {
-    internal interface IDataReader
+    public interface IDataReader
     {
         Task<IEnumerable<Commit>> Read(Guid streamId);
     }

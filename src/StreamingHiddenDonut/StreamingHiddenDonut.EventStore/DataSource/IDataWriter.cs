@@ -3,7 +3,7 @@ using StreamingHiddenDonut.EventStore.Stream.Data;
 
 namespace StreamingHiddenDonut.EventStore.DataSource
 {
-    internal interface IDataWriter
+    public interface IDataWriter
     {
         Task Append(Commit commit);
     }

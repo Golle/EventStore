@@ -2,6 +2,6 @@
 {
     internal interface ISqlQuery
     {
-        string SqlQuery { get; }
+        string Query { get; }
     }
 }

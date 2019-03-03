@@ -15,7 +15,7 @@ namespace StreamingHiddenDonut.EventStore.MSSQL.Database.Connection
 
         public async Task<ISqlDataReader> Query(ISqlQuery query)
         {
-            var sqlCommand = new System.Data.SqlClient.SqlCommand(query.SqlQuery, _connection);
+            var sqlCommand = new System.Data.SqlClient.SqlCommand(query.Query, _connection);
             return new SqlDataReaderWrapper(await sqlCommand.ExecuteReaderAsync());
         }
 

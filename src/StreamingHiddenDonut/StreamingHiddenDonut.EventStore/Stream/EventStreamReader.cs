@@ -10,10 +10,10 @@ namespace StreamingHiddenDonut.EventStore.Stream
 {
     internal class EventStreamReader : IEventStreamReader
     {
-        private readonly IDataReader _dataReader;
+        private readonly DataSource.IDataReader _dataReader;
         private readonly IEventSerializer _eventSerializer;
 
-        public EventStreamReader(IDataReader dataReader, IEventSerializer eventSerializer)
+        public EventStreamReader(DataSource.IDataReader dataReader, IEventSerializer eventSerializer)
         {
             _dataReader = dataReader;
             _eventSerializer = eventSerializer;

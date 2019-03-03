@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
+using StreamingHiddenDonut.EventStore.Common;
 using StreamingHiddenDonut.EventStore.Stream.Data;
 
-namespace StreamingHiddenDonut.EventStore.Common
+namespace StreamingHiddenDonut.EventStore.Serializers
 {
-    internal class EventSerializer : IEventSerializer
+    public class JsonEventSerializer : IEventSerializer
     {
         private readonly JsonSerializerSettings _serializationSettings = new JsonSerializerSettings
         {
