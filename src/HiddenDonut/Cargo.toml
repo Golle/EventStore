@@ -1,9 +1,0 @@
-[package]
-name = "HiddenDonut"
-version = "0.1.0"
-authors = ["Jens"]
-edition = "2018"
-
-[dependencies]
-uuid = "0.7.2"
-
